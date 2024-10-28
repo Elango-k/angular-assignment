@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.login-blog {
+    background-image: url('../../assets/vegetables.jpg');
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;   
+    width: 100%;                   
+    min-height: 100vh;             
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: 82vh;
+    width: 70%;
+    margin: 50px 0;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.left-section {
+    flex: 1;
+    background: url('../../assets/login-banner.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 8px 0 0 8px;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius:12px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-btn {
+    padding: 9px 40px;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: #fff;
+}
+
+.register-btn {
+    padding: 9px 38px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #000;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: left;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 15px 0 20px 0;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 14px;
+}
+
+input[type="email"]:focus-visible, 
+input[type="password"]:focus-visible {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+}
+
+.submit-blog{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.submit-btn {
+    width: 30%;
+    padding: 9px;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.submit-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: #fff;
+}
+
+.register-school {
+    margin-top: 20px;
+    padding: 15px 35px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
