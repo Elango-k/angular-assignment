@@ -1,0 +1,163 @@
+<!-- <div class="modal-overlay" (click)="closeModal()"></div>
+<div class="modal-content">
+    <section class="popup-blog">
+        <div class="heading-flex">
+            <h2>Add New Leave</h2>
+            <img (click)="closeModal()" src="../../assets/close-cio.jpeg">
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="dropdowns">
+                        <select class="select-class">
+                            <option>Select Class</option>
+                            <option>XII</option>
+                            <option>XI</option>
+                        </select>
+    
+                        <select class="select-section">
+                            <option>Select Section</option>
+                            <option>A</option>
+                            <option>B</option>
+                        </select>
+    
+                        <select class="select-student">
+                            <option>Select Student</option>
+                            <option>Raj</option>
+                            <option>kumar</option>
+                        </select>
+    
+                        <textarea placeholder="Reason"></textarea>
+    
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="check-bars">
+                        <div class="leave-days">
+                            <p>Number of Leave days :</p>
+                            <label class="container">Single Day
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Multiple Days
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+
+                        <input type="text" 
+                        class="start-input-date"
+                        placeholder="Start Date"
+                        onfocus="(this.type='date')"
+                        onblur="(this.type='text')">
+
+                        <input type="text" 
+                        class="end-input-date"
+                        placeholder="End Date"
+                        onfocus="(this.type='date')"
+                        onblur="(this.type='text')">
+
+                        <div class="leave-status">
+                            <p>Status :</p>
+                            <label class="container">Approved
+                                <input type="radio" name="status">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Unapproved
+                                <input type="radio" name="status">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-submit">
+                <button class="reset-btn">RESET</button>
+                <button class="add-btn">ADD LEAVE</button>
+            </div>
+        </form>
+    </section>
+</div>
+ -->
+
+ <div class="modal-overlay" (click)="closeModal()"></div>
+<div class="modal-content">
+    <section class="popup-blog">
+        <div class="heading-flex">
+            <h2>Add New Leave</h2>
+            <img (click)="closeModal()" src="../../assets/close-cio.jpeg">
+        </div>
+        <form (ngSubmit)="addLeave()">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="dropdowns">
+                        <select [(ngModel)]="selectedClass" name="class" class="select-class">
+                            <option value="" disabled selected>Select Class</option>
+                            <option>XII</option>
+                            <option>XI</option>
+                        </select>
+
+                        <select [(ngModel)]="selectedSection" name="section" class="select-section">
+                            <option value="" disabled selected>Select Section</option>
+                            <option>A</option>
+                            <option>B</option>
+                        </select>
+
+                        <select [(ngModel)]="selectedStudent" name="student" class="select-student">
+                            <option value="" disabled selected>Select Student</option>
+                            <option>Raj</option>
+                            <option>Kumar</option>
+                        </select>
+
+                        <textarea [(ngModel)]="reason" name="reason" placeholder="Reason"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="check-bars">
+                        <div class="leave-days">
+                            <p>Number of Leave days :</p>
+                            <label class="container">Single Day
+                                <input type="radio" [(ngModel)]="leaveDays" value="Single Day" name="leaveDays">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Multiple Days
+                                <input type="radio" [(ngModel)]="leaveDays" value="Multiple Days" name="leaveDays">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+
+                        <input type="text" 
+                               [(ngModel)]="startDate" name="startDate"
+                               class="start-input-date"
+                               placeholder="Start Date"
+                               onfocus="(this.type='date')"
+                               onblur="(this.type='text')">
+
+                        <input type="text" 
+                               [(ngModel)]="endDate" name="endDate"
+                               class="end-input-date"
+                               placeholder="End Date"
+                               onfocus="(this.type='date')"
+                               onblur="(this.type='text')">
+
+                        <div class="leave-status">
+                            <p>Status :</p>
+                            <label class="container">Approved
+                                <input type="radio" [(ngModel)]="leaveStatus" value="Approved" name="status">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Unapproved
+                                <input type="radio" [(ngModel)]="leaveStatus" value="Unapproved" name="status">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-submit">
+                <button type="button" class="reset-btn" (click)="resetForm()">RESET</button>
+                <button type="submit" class="add-btn">ADD LEAVE</button>
+            </div>
+        </form>
+    </section>
+</div>
